@@ -1,0 +1,73 @@
+{
+    "nomBar": "Brindis & Amigos",
+    "lema": "Sabor y Encanto",
+    "fundado": 1990,
+    "active": true,
+    "Creador":"Ferney Ponce",
+    "tipos": [
+        {
+            "nombre": "Whisky",
+            "pais": "Irlanda",
+            "marca": [
+                "Johnnie Walker $70.000",
+                "Jack Daniel's $100.000",
+                "Glenfiddich $120.000",
+                "Jameson $150.000"
+            ]
+        },
+        {
+            "nombre": "Vodka",
+            "pais": "Rusia",
+            "marca": [
+                "Absolut $70.000",
+                "Grey Goose  $100.000",
+                "Belvedere $120.000",
+                "Smirnoff $150.000"
+            ]
+        },
+        {
+            "nombre": "Ron",
+            "pais": " Asia y América del Sur",
+            "marca": [
+
+                "Bacardi $70.000",
+                "Captain Morgan  $100.000",
+                "Havana Club $120.000",
+                "Mount Gay $150.000"
+            ]
+        },
+        {
+            "nombre": "Tequila",
+            "pais": "México",
+            "marca": [
+
+                "Patrón $70.000",
+                "Don Julio  $100.000",
+                "Jose Cuervo $120.000",
+                "Sauza $150.000"
+            ]
+        },
+        {
+            "nombre": "Ginebra",
+            "pais": "Holanda",
+            "marca": [
+
+                "Bombay Sapphire $70.000",
+                "Tanqueray  $100.000",
+                "Hendrick's $120.000",
+                "Beefeater $150.000"
+            ]
+        },
+        {
+            "nombre": "Brandy",
+            "pais": "España",
+            "marca": [
+
+                "Hennessy $70.000",
+                "Rémy Martin  $100.000",
+                "Courvoisier $120.000",
+                "Martell $150.000"
+            ]
+        }
+    ]
+}

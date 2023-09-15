@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+
+    <title>Nuestros Licores</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Reggae+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+<header>
+
+</header>
+
+<section>
+
+</section>
+
+<script>
+
+    async function licores() {
+
+        const requestURL = 'bar.json';
+        const request = new Request(requestURL);
+
+        const response = await fetch(request);
+        const barText = await response.text();
+
+        const bar = JSON.parse(barText);
+        cartaHeader(bar);
+        cartaBar(bar);
+        cartaFooter(bar);
+
+    }
+
+    function cartaHeader(obj) {
+        const header = document.querySelector('header');
+        const myH1 = document.createElement('h1');
+        myH1.textContent = obj.nomBar;
+        header.appendChild(myH1);
+
+        const myPara = document.createElement('p');
+        myPara.textContent = `${obj.lema} // Fundado en ${obj.fundado}`;
+        header.appendChild(myPara);
+    }
+
+    function cartaBar(obj) {
+        const section = document.querySelector('section');
+        const licores = obj.tipos;
+
+        for (const licor of licores) {
+            const myArticle = document.createElement('article');
+            const myH2 = document.createElement('h2');
+            const myPara1 = document.createElement('p');
+           
+            const myPara3 = document.createElement('p');
+            const myList = document.createElement('ul');
+
+            myH2.textContent = licor.nombre;
+            myPara1.textContent = `Pais Origen: ${licor.pais}`;
+            myPara3.textContent = 'Marcas';
+
+            const marcas = licor.marca;
+            for (const marca of marcas) {
+                const listItem = document.createElement('li');
+                listItem.textContent = marca;
+                myList.appendChild(listItem);
+            }
+
+            myArticle.appendChild(myH2);
+            myArticle.appendChild(myPara1);
+            myArticle.appendChild(myPara3);
+            myArticle.appendChild(myList);
+
+            section.appendChild(myArticle);
+        }
+    }
+    function cartaFooter(obj) {
+        const footer = document.querySelector('footer');
+        const myH3 = document.createElement('h3');
+        myH3.textContent =obj.Creador; 
+        footer.appendChild(myH3);
+
+
+    }
+
+    licores();
+
+</script>
+<footer>   
+</footer>
+</body>
+</html>
